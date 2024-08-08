@@ -12,16 +12,46 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #f4f4f4;
             margin: 0;
+            background-color: #121212; /* Fundo para dark mode */
+            color: #ffffff; /* Cor do texto em dark mode */
         }
 
         .container {
             text-align: center;
-            background: #fff;
+            background-color: #1e1e1e; /* Cor do fundo do container em dark mode */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 90%; /* Para dispositivos móveis */
+            max-width: 400px; /* Limite máximo para desktops */
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444; /* Borda em dark mode */
+            background-color: #2e2e2e; /* Fundo do input em dark mode */
+            color: #ffffff; /* Cor do texto em dark mode */
+            width: 100%; /* Input responsivo */
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #6200ee; /* Cor do botão em dark mode */
+            color: #ffffff;
+            cursor: pointer;
+            width: 100%; /* Botão responsivo */
+            box-sizing: border-box;
+        }
+
+        button:hover {
+            background-color: #3700b3; /* Efeito hover em dark mode */
         }
     </style>
     <script>
