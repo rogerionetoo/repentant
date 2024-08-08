@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "123") {
+                window.location.href = "http://127.0.0.1:5500/carta.html";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proteção por Senha</h1>
+        <div>
+            <label for="password">Digite a senha:</label>
+            <input type="password" id="password">
+            <button onclick="checkPassword()">Enviar</button>
+        </div>
+    </div>
+</body>
+
+</html>
