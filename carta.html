@@ -10,14 +10,14 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            background-color: #121212; /* Fundo para dark mode */
-            color: #ffffff; /* Cor do texto em dark mode */
+            background-color: #121212;
+            color: #ffffff;
             margin: 0;
             box-sizing: border-box;
         }
 
         .container {
-            background-color: #1e1e1e; /* Fundo do container em dark mode */
+            background-color: #1e1e1e;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -27,24 +27,41 @@
         }
 
         .video {
-            text-align: right;
-            margin-bottom: 20px;
+            width: 100%;
+            max-width: 560px;
+            margin: 20px auto;
+            border-radius: 10px;
         }
 
         video {
             width: 100%;
             height: auto;
-            max-width: 560px;
-            aspect-ratio: 16/9; /* Mantém a proporção do vídeo */
+            aspect-ratio: 16/9;
             border-radius: 10px;
         }
 
         h1 {
-            color: #bb86fc; /* Cor do título em dark mode */
+            color: #bb86fc;
+            margin-top: 20px;
         }
 
         p {
             line-height: 1.6;
+            text-align: left;
+            animation: fadeInUp 2.5s ease-out forwards;
+            opacity: 0;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -52,7 +69,8 @@
 <body>
     <div class="container">
         <div class="video">
-            <video src="edgeofdesire.mp4" autoplay muted controls></video>
+            <video src="edgeofdesire.mp4" autoplay muted playsinline controls></video>
+        </div>
         <h1>Texto...</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet tincidunt urna. Nunc id ultricies ex. Ut quis est condimentum diam dapibus pulvinar vel sollicitudin felis. Suspendisse potenti. Aenean consectetur neque ac mauris suscipit, vel malesuada ligula maximus. Etiam vel odio elit. Vestibulum at turpis sed magna ultrices sodales at aliquet leo. Aenean sit amet libero erat. Ut vulputate porttitor feugiat. Nullam sit amet ultrices augue. Maecenas enim leo, ultricies non mauris sed, varius egestas ante. Vivamus sem dolor, porttitor et mollis a, pharetra ac justo. Sed euismod turpis vitae ipsum imperdiet facilisis. Vivamus efficitur elementum ex, nec ultrices erat hendrerit id. Cras feugiat, magna eget cursus tincidunt, diam urna dapibus neque, eu bibendum justo diam at leo. Nam sem ligula, ultrices at semper sed, pharetra sit amet tortor.</p>
         <p>Pellentesque ullamcorper pharetra dui non rhoncus. Nam vel volutpat ipsum. Aenean mi risus, imperdiet suscipit leo eget, placerat ultricies orci. Maecenas quam nisl, feugiat in risus et, consequat lacinia nisi. Morbi dolor nunc, egestas et egestas eu, facilisis nec velit. Aenean rutrum non erat at vehicula. Nam aliquam, est fermentum scelerisque hendrerit, odio nisl volutpat magna, eget commodo ipsum risus non risus. Praesent semper nisi sit amet justo tempor, et dictum nulla lobortis. Quisque faucibus mauris a metus efficitur venenatis. Nam quam nisl, dictum vel viverra id, scelerisque ac libero.</p>
