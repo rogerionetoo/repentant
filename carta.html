@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,56 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            background: #f4f4f4;
+            background-color: #121212; /* Fundo para dark mode */
+            color: #ffffff; /* Cor do texto em dark mode */
             margin: 0;
+            box-sizing: border-box;
         }
+
         .container {
-            background: #fff;
+            background-color: #1e1e1e; /* Fundo do container em dark mode */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             max-width: 800px;
             margin: auto;
+            box-sizing: border-box;
         }
+
         .video {
             text-align: right;
             margin-bottom: 20px;
         }
+
+        iframe {
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+            aspect-ratio: 16/9; /* Mantém a proporção do vídeo */
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #bb86fc; /* Cor do título em dark mode */
+        }
+
+        p {
+            line-height: 1.6;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="video">  
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Nt-jb5JHWB8?si=dgmPV9XHa7HBzJux" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                <h1>Texto...</h1>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/Nt-jb5JHWB8?si=dgmPV9XHa7HBzJux" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h1>Texto...</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet tincidunt urna. Nunc id ultricies ex. Ut quis est condimentum diam dapibus pulvinar vel sollicitudin felis. Suspendisse potenti. Aenean consectetur neque ac mauris suscipit, vel malesuada ligula maximus. Etiam vel odio elit. Vestibulum at turpis sed magna ultrices sodales at aliquet leo. Aenean sit amet libero erat. Ut vulputate porttitor feugiat. Nullam sit amet ultrices augue. Maecenas enim leo, ultricies non mauris sed, varius egestas ante. Vivamus sem dolor, porttitor et mollis a, pharetra ac justo. Sed euismod turpis vitae ipsum imperdiet facilisis. Vivamus efficitur elementum ex, nec ultrices erat hendrerit id. Cras feugiat, magna eget cursus tincidunt, diam urna dapibus neque, eu bibendum justo diam at leo. Nam sem ligula, ultrices at semper sed, pharetra sit amet tortor.</p>
         <p>Pellentesque ullamcorper pharetra dui non rhoncus. Nam vel volutpat ipsum. Aenean mi risus, imperdiet suscipit leo eget, placerat ultricies orci. Maecenas quam nisl, feugiat in risus et, consequat lacinia nisi. Morbi dolor nunc, egestas et egestas eu, facilisis nec velit. Aenean rutrum non erat at vehicula. Nam aliquam, est fermentum scelerisque hendrerit, odio nisl volutpat magna, eget commodo ipsum risus non risus. Praesent semper nisi sit amet justo tempor, et dictum nulla lobortis. Quisque faucibus mauris a metus efficitur venenatis. Nam quam nisl, dictum vel viverra id, scelerisque ac libero.</p>
         <p>Aenean turpis risus, convallis nec tristique eget, eleifend at orci. Sed porta metus ut sem rutrum, id porttitor odio congue. Phasellus et lacinia neque. Etiam vestibulum risus in turpis pretium, et vulputate mauris interdum. Pellentesque convallis elit vel eros fringilla tempor. Nullam erat neque, dapibus id dapibus ut, sagittis id nisl. Vestibulum tempor odio ac consectetur iaculis. Donec eget cursus lorem. Phasellus vel turpis gravida, lacinia purus sit amet, auctor leo. Donec scelerisque nec sem sit amet ullamcorper. Suspendisse quis consequat est. Curabitur fringilla, enim vel laoreet sollicitudin, tortor libero tristique nisl, eu vehicula erat metus in felis. Duis bibendum, dolor sit amet accumsan imperdiet, metus dui iaculis est, id consequat sem leo nec justo. Sed condimentum venenatis turpis sed interdum.</p>
-        <p>Nulla ut quam non tortor imperdiet pharetra. Pellentesque a odio nibh. Nullam vulputate laoreet euismod. Sed maximus posuere purus, quis efficitur leo vestibulum ac. Donec et velit eget nulla porta porta. In at ex tortor. Donec ac mauris vitae libero fringilla faucibus. Curabitur magna mi, maximus ultricies purus quis, scelerisque gravida ante. Cras bibendum nibh et leo pellentesque venenatis ut ut nunc. Quisque malesuada nisl urna, id rhoncus lorem luctus ut. Class aptent taciti sociosqu ad litora tor
+        <p>Nulla ut quam non tortor imperdiet pharetra. Pellentesque a odio nibh. Nullam vulputate laoreet euismod. Sed maximus posuere purus, quis efficitur leo vestibulum ac. Donec et velit eget nulla porta porta. In at ex tortor. Donec ac mauris vitae libero fringilla faucibus. Curabitur magna mi, maximus ultricies purus quis, scelerisque gravida ante. Cras bibendum nibh et leo pellentesque venenatis ut ut nunc. Quisque malesuada nisl urna, id rhoncus lorem luctus ut.</p>
+    </div>
+</body>
+
+</html>
