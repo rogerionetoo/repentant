@@ -15,6 +15,8 @@
             margin: 0;
             background-color: #121212;
             color: #ffffff;
+            overflow: hidden;
+            position: relative;
         }
 
         .container {
@@ -25,6 +27,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 90%;
             max-width: 400px;
+            z-index: 10;
         }
 
         input[type="password"] {
@@ -68,6 +71,34 @@
                 padding: 8px;
             }
         }
+
+        /* Estilos para os balões */
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 60px;
+            height: auto;
+            animation: floatUp 6s infinite ease-in-out;
+            opacity: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                bottom: -150px;
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                bottom: 100vh;
+                opacity: 0;
+                transform: translateX(50px);
+            }
+        }
     </style>
     <script>
         function checkPassword() {
@@ -78,6 +109,25 @@
                 alert("Senha incorreta. Tente novamente.");
             }
         }
+
+        function createBalloon() {
+    var balloon = document.createElement("img");
+    balloon.className = "balloon";
+
+    // Alterna entre duas imagens de balões
+    var balloonColor = Math.random() > 0.5 ? "balloon.png" : "balloon2.png";
+    balloon.src = balloonColor; // Substitua pelos nomes das suas imagens de balão
+
+    balloon.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(balloon);
+
+    setTimeout(function () {
+        balloon.remove();
+    }, 6000); // Remove o balão após a animação
+}
+
+setInterval(createBalloon, 500); // Cria um balão a cada 500ms
+
     </script>
 </head>
 
